@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fate2Gate</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+const themes = [
+  "white-theme",
+  "gray-theme",
+  "lightgray-theme",
+  "offwhite-theme",
+];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="box">
+      <h2>> 🎲 Fate2Gate</h2>
+      <p>
+        Fate2Gate is a gate sequencer that simulates weighted dice throws through a real-time rigid-body physics engine. Outcomes are drawn from user-defined bias distributions, with motion dynamics modulated by Shannon entropy. The system maps stochastic decisions to rhythmic gates, enabling physically grounded, information-theoretic pattern generation; wrapped in a playful, interactive interface.
+
+
+      </p>
+      <p>
+        Click a single die to roll it alone. Click outside to roll all dice at once. You can also change the dice group.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="1.gif" alt="Dice interaction demo" width="100%" />
+    </div>
+
+    <div class="box">
+<h3>Bias Mechanics</h3>
+<p>
+  Each die has a 6-dimensional bias vector controlling the probability distribution over its faces.
+  These biases are user-editable via sliders, shaping the roll tendencies that drive the physics simulation.
+</p>
+<p>
+  Rolls are sampled from the discrete distribution defined by the normalized bias vector:
+</p>
+<pre>
+H = -∑₍i=1→6₎ pᵢ · log₂(pᵢ)    where  pᵢ = wᵢ / ∑ⱼwⱼ
+Hₘₐₓ = log₂(6) ≈ 2.585 bits
+</pre>
+<p>
+  <strong>High entropy</strong> → greater wobble and chaotic dynamics<br/>
+  <strong>Low entropy</strong> → minimal wobble, die locks reliably to the favored face
+</p>
+
+    </div>
+
+    <div class="box">
+      <img src="2.gif" alt="Entropy-based roll demo" width="100%" />
+    </div>
+
+    <div class="box">
+      <h3>> 🎲 Dice Roles</h3>
+      <ul>
+        <li> <strong>Dice A — Grid Length</strong><br/>Decides how many steps long the rhythmic pattern is.</li>
+        <li> <strong>Dice B — Start Position</strong><br/>Where your pattern starts inside the grid.</li>
+        <li> <strong>Dice C — Gate Repetition / Interval</strong><br/>Sets how often the gate repeats (i.e. distance between active steps).</li>
+        <li> <strong>Dice D — Timing Division</strong><br/>Multiplies or modifies the timing.</li>
+      </ul>
+      <p>
+        Use the Dice Table to define values for each face.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="3.gif" alt="Dice roles visual" width="100%" />
+    </div>
+
+    <div class="box"><a href="vst.html"><< Back to VST</a></div>
+  </div>
+</body>
+</html>
+

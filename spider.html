@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpideySenses</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const themes = [
+      "white-theme",
+      "gray-theme",
+      "lightgray-theme",
+      "offwhite-theme",
+
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="box">
+      <h2>> 🕷 SpideySenses</h2>
+      <p>SpideySenses is a real-time monophonic FM synthesis engine with dynamic feedback shaping and envelope modulation, designed for tactile responsiveness and physical expressivity.</p>
+      <p>It features:</p>
+      <ul>
+        <li>Frequency modulation synthesis with real-time control over modulation index and carrier drift, mimicking strain and tension in elastic materials.</li>
+        <li>A custom ADSR envelope generator with hysteresis-based triggering and envelope decay mapped to external energy loss (e.g., damping in a stretched web).</li>
+        <li>Feedback-induced pitch deviation and nonlinear response shaping, simulating vibrational coupling as seen in stretched surfaces or soft-body interactions.</li>
+        <li>Time-smoothed control parameters (mod index, envelope target, feedback depth) act as continuous sensory inputs, altering the state of the system in a way reminiscent of mechanoreceptive touch sensors.</li>
+        <li>Synthesized output merges a stable drone field with transient pluck excitation, modulated by envelope amplitude and feedback energy.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+<video controls>
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+    </div>
+     <div class="box"><a href="vst.html"><< Back to VST</a></div>
+  </div>
+</body>
+</html>
+

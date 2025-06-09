@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Installations / Instruments</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+const themes = [
+  "white-theme",
+  "gray-theme",
+  "lightgray-theme",
+  "offwhite-theme",
+
+];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="box"><a href="fate2gate.html">> fate2gate</a></div>
+        <div class="box"><a href="spider.html">> SpideySenses</a></div>
+    <div class="box"><a href="index.html"><< Back</a></div>
+  </div>
+</body>
+</html>
+

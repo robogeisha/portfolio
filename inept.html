@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ooobjects</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const themes = [
+      "white-theme",
+      "gray-theme",
+      "lightgray-theme",
+      "offwhite-theme",
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="box">
+      <h2>> Inept</h2>
+      <p>
+        Inept is a DIY-friendly voltage-controlled oscillator (VCO) built around the iconic 555 timer IC, celebrating lo-fi ingenuity and hands-on fabrication.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="Inept_1.jpg" alt="Inept Image 1" style="width:100%; height:auto;" />
+    </div>
+
+    <div class="box">
+      <img src="Inept_2.jpg" alt="Inept Image 2" style="width:100%; height:auto;" />
+    </div>
+
+    <!-- Moved PDF here -->
+    <div class="box">
+      <iframe src="Inept_diy.pdf" width="100%" height="600px" style="border:none;">
+        This browser does not support PDFs. Please download the PDF to view it: 
+        <a href="Inept_diy.pdf">Download PDF</a>.
+      </iframe>
+    </div>
+
+    <!-- Added images inept_a.png to inept_f.png -->
+    <div class="box"><img src="inept_a.png" alt="Inept A" style="width:100%; height:auto;" /></div>
+    <div class="box"><img src="inept_b.png" alt="Inept B" style="width:100%; height:auto;" /></div>
+    <div class="box"><img src="inept_c.png" alt="Inept C" style="width:100%; height:auto;" /></div>
+    <div class="box"><img src="inept_d.png" alt="Inept D" style="width:100%; height:auto;" /></div>
+    <div class="box"><img src="inept_e.png" alt="Inept E" style="width:100%; height:auto;" /></div>
+    <div class="box"><img src="inept_f.png" alt="Inept F" style="width:100%; height:auto;" /></div>
+
+    <div class="box"><a href="ux.html"><< Back to UX/UI Research</a></div>
+  </div>
+</body>
+</html>
+

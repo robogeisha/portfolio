@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESRA</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const themes = [
+      "white-theme",
+      "gray-theme",
+      "lightgray-theme",
+      "offwhite-theme",
+
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+      <div class="box"><a href="info.html">> Info</a></div>
+    <div class="box"><a href="vst.html">> VST/Digital</a></div>
+    <div class="box"><a href="instruments.html">> Installation/Instruments</a></div>
+    <div class="box"><a href="ux.html">> UX/UI Research</a></div>
+    <div class="box"><a href="paper.html">> Papers/Posters</a></div>
+    <div class="box"><a href="essay.html">> Essays</a></div>
+    <div class="box"><a href="3d.html">> 3D Art</a></div>
+  </div>
+</body>
+</html>
+

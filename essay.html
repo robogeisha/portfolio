@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Essays</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const themes = [
+      "white-theme",
+      "gray-theme",
+      "lightgray-theme",
+      "offwhite-theme",
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+
+
+    <div class="box">
+      <h2>> Too Still, Too Strange</h2>
+      <iframe src="essay_prehistory.pdf" width="100%" height="600px" style="border:none;">
+        This browser does not support PDFs. Please download the PDF to view it:
+        <a href="poster.pdf">Download PDF</a>.
+      </iframe>
+    </div>
+
+    <div class="box">
+      <h2>> Too Early, Too Easy</h2>
+      <iframe src="essay_ai.pdf" width="100%" height="600px" style="border:none;">
+        This browser does not support PDFs. Please download the PDF to view it:
+        <a href="paper1.pdf">Download PDF</a>.
+      </iframe>
+    </div>
+
+    <div class="box"><a href="index.html"><< Back</a></div>
+  </div>
+</body>
+</html>
+

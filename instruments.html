@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Installations / Instruments</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+const themes = [
+  "white-theme",
+  "gray-theme",
+  "lightgray-theme",
+  "offwhite-theme",
+
+];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+    <div class="box"><a href="squares.html">> Squares, Squares</a></div>
+    <div class="box"><a href="oo0objects.html">> oo0objects</a></div>
+    <div class="box"><a href="sahibinden.html">> Clutter</a></div>
+
+    <div class="box"><a href="index.html"><< Back</a></div>
+  </div>
+</body>
+</html>
+

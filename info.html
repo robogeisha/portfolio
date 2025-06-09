@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Info</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    const themes = [
+      "white-theme",
+      "gray-theme",
+      "lightgray-theme",
+      "offwhite-theme",
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+    });
+  </script>
+</head>
+<body>
+  <div class="terminal-container">
+
+    <div class="box">
+     <h2>> 🕳️ Info</h2>
+
+      <p><strong>Hi, I’m Esra.</strong></p>
+      <p>
+        This is a folder of things I got obsessed with for a while.
+        Click around. No promises.
+      </p>
+    </div>
+<div class="box">
+  <iframe 
+    width="100%" 
+    height="166" 
+    scrolling="no" 
+    frameborder="no" 
+    allow="autoplay" 
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/robogeisha101001/4-1921682401-16-44-master&color=%23000000&inverse=false&auto_play=false&show_user=true">
+  </iframe>
+</div>
+
+
+    <div class="box">
+      <img src="info.png" alt="Esra info visual" width="100%" />
+    </div>
+
+    <div class="box"><a href="index.html"><< Back</a></div>
+
+  </div>
+</body>
+</html>
+
