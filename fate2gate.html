@@ -55,7 +55,7 @@
 
       <p>
         Fate2Gate is a 4-channel stochastic gate sequencer that uses weighted dice to generate drum patterns.
-        Each channel has four dice controlling grid length, start position, repeat interval, and timing division.
+        Each channel has four dice controlling grid length, start position, gate interval, and timing division.
       </p>
 
       <p>
@@ -67,7 +67,7 @@
       <h3>&gt; Interface Overview</h3>
 
       <p>
-        The interface shows the active dice pair, the selected channel, dice values, bias controls, and generated gate pattern.
+        The interface shows the active dice pair, selected channel, dice values, bias controls, and generated gate pattern.
         Dice can be rolled manually or updated automatically with Autoroll.
       </p>
     </div>
@@ -85,8 +85,8 @@
       <h3>&gt; Interaction</h3>
 
       <p>
-        Click a single die to roll it manually. Click outside the dice to roll the visible dice pair.
-        In Autoroll mode, manual rolling is disabled and the selected channel updates automatically at cycle boundaries.
+        Click a single die to roll it. Click outside the dice to roll the visible dice pair.
+        Enable Autoroll to update the selected channel automatically at cycle boundaries.
       </p>
     </div>
 
@@ -103,7 +103,7 @@
       <h3>&gt; Bias Mechanics</h3>
 
       <p>
-        Each die has six faces. Each face can be assigned a rhythmic value and a bias amount.
+        Each die has six faces. Assign each face a rhythmic value and a bias amount.
         Higher bias makes that face more likely to be selected.
       </p>
 
@@ -156,8 +156,8 @@
       <h3>&gt; Manual / Autoroll</h3>
 
       <p>
-        In manual mode, dice are rolled by direct interaction.
-        In Autoroll mode, Fate2Gate rerolls automatically at cycle boundaries.
+        In manual mode, roll dice directly through the interface.
+        In Autoroll mode, reroll the selected channel automatically at cycle boundaries.
       </p>
     </div>
 
