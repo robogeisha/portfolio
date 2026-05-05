@@ -5,7 +5,7 @@
 
 /* Theme color classes */
 body.white-theme     { --accent-color: #ffffff; } /* pure white */
-body.gray-theme      { --accent-color: #888888; } /* medium gray */
+body.gray-theme      { --accent-color: #eeeeee; } /* medium gray */
 body.darkgray-theme  { --accent-color: #444444; } /* dark gray */
 body.lightgray-theme { --accent-color: #cccccc; } /* light gray */
 body.offwhite-theme  { --accent-color: #eeeeee; } /* slightly off-white */
