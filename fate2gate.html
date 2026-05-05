@@ -2,20 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Fate2Gate</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .video-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      background: #000;
+    }
+
+    @media (max-width: 768px) {
+      .video-wrap video {
+        max-height: 70vh;
+      }
+    }
+  </style>
 
   <script>
     const themes = [
       "white-theme",
       "gray-theme",
       "lightgray-theme",
-      "offwhite-theme",
+      "offwhite-theme"
     ];
 
     document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add(themes[Math.floor(Math.random() * themes.length)]);
+      document.body.classList.add(
+        themes[Math.floor(Math.random() * themes.length)]
+      );
     });
   </script>
 </head>
@@ -24,83 +51,90 @@
   <div class="terminal-container">
 
     <div class="box">
-      <h2>> 🎲 Fate2Gate</h2>
+      <h2>&gt; 🎲 Fate2Gate</h2>
 
       <p>
         Fate2Gate is a 4-channel stochastic gate sequencer that uses weighted dice to generate drum patterns.
-        Each channel has dice controlling grid length, start position, repeat interval, and timing division.
-        Dice faces are mapped to rhythmic values, and user-defined bias controls how likely each value is to occur.
+        Each channel has four dice controlling grid length, start position, repeat interval, and timing division.
       </p>
 
       <p>
-        The dice are simulated through a real-time rigid-body physics engine. Strong bias makes the roll feel more locked and stable,
-        while a more even distribution makes the roll more chaotic.
-      </p>
-
-      <p>
-        Patterns can be changed manually by rolling dice, or generated continuously with Autoroll, where the system rerolls at cycle boundaries.
+        Dice faces are mapped to rhythmic values. Bias controls how likely each face is to be selected when the die rolls.
       </p>
     </div>
 
     <div class="box">
-      <video width="100%" autoplay muted loop playsinline>
-        <source src="1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="box">
-      <h3>> Interaction</h3>
+      <h3>&gt; Interface Overview</h3>
 
       <p>
-        Click a single die to roll it manually, or click outside the dice to roll the visible pair.
-        In Autoroll mode, manual rolling is disabled and the selected channel updates automatically as the sequencer runs.
+        The interface shows the active dice pair, the selected channel, dice values, bias controls, and generated gate pattern.
+        Dice can be rolled manually or updated automatically with Autoroll.
       </p>
     </div>
 
     <div class="box">
-      <h3>> Bias Mechanics</h3>
+      <div class="video-wrap">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>&gt; Interaction</h3>
 
       <p>
-        Each die has six faces, and each face can be made more or less likely with bias controls.
-        Higher bias means that face is more likely to come up when the die rolls.
-      </p>
-
-      <p>
-        The bias also affects the physical behavior of the roll.
-        Strong bias makes the die feel more locked and stable, while a more even distribution makes the roll wobblier and more chaotic.
+        Click a single die to roll it manually. Click outside the dice to roll the visible dice pair.
+        In Autoroll mode, manual rolling is disabled and the selected channel updates automatically at cycle boundaries.
       </p>
     </div>
 
     <div class="box">
-      <video width="100%" controls playsinline>
-        <source src="2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata">
+          <source src="2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <div class="box">
-      <h3>> 🎲 Dice Roles</h3>
+      <h3>&gt; Bias Mechanics</h3>
+
+      <p>
+        Each die has six faces. Each face can be assigned a rhythmic value and a bias amount.
+        Higher bias makes that face more likely to be selected.
+      </p>
+
+      <p>
+        Bias is also used in the dice simulation. Stronger bias makes the die settle more directly toward the weighted face.
+        A more even distribution produces less predictable roll behavior.
+      </p>
+    </div>
+
+    <div class="box">
+      <h3>&gt; Dice Roles</h3>
 
       <ul>
         <li>
-          <strong>Dice A — Grid Length</strong><br/>
-          Decides how many steps long the rhythmic pattern is.
+          <strong>Dice A — Grid Length</strong><br />
+          Sets the number of steps in the rhythmic pattern.
         </li>
 
         <li>
-          <strong>Dice B — Start Position</strong><br/>
-          Decides where the pattern starts inside the grid.
+          <strong>Dice B — Start Position</strong><br />
+          Sets where the pattern begins inside the grid.
         </li>
 
         <li>
-          <strong>Dice C — Gate Repetition / Interval</strong><br/>
+          <strong>Dice C — Gate Interval</strong><br />
           Sets the step distance between repeated gates.
         </li>
 
         <li>
-          <strong>Dice D — Timing Division</strong><br/>
-          Multiplies or modifies the timing.
+          <strong>Dice D — Timing Division</strong><br />
+          Sets the timing multiplier or rhythmic subdivision.
         </li>
       </ul>
 
@@ -110,26 +144,30 @@
     </div>
 
     <div class="box">
-      <video width="100%" autoplay muted loop playsinline>
-        <source src="3.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="video-wrap">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <div class="box">
-      <h3>> Manual / Autoroll</h3>
+      <h3>&gt; Manual / Autoroll</h3>
 
       <p>
-        In manual mode, the user performs changes directly by rolling dice.
-        In Autoroll mode, Fate2Gate rerolls automatically at cycle boundaries, turning the pattern into a self-mutating drum gate.
+        In manual mode, dice are rolled by direct interaction.
+        In Autoroll mode, Fate2Gate rerolls automatically at cycle boundaries.
       </p>
     </div>
 
     <div class="box">
-      <video width="100%" controls playsinline>
-        <source src="4.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata">
+          <source src="4.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <div class="box">
